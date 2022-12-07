@@ -29,6 +29,7 @@ export default function Docs() {
             align-items: center;
             justify-content: flex-end;
             height: 100%;
+            overflow: hidden;
           }
 
           .screen {
