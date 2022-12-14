@@ -5,7 +5,7 @@ export const TextField = (props: TextFieldProps) => {
   const { hasError, hintText, label, id, type = "text", ...other } = props;
 
   return (
-    <LucyTextField>
+    <LucyTextField hasError={hasError}>
       <label htmlFor={id}>
         <Typography variant="label" hasError={hasError}>
           {label}
