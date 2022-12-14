@@ -10,7 +10,25 @@ export const TextField = (props: TextFieldProps) => {
   );
 };
 
-interface TextFieldProps extends React.HTMLAttributes<HTMLInputElement> {
+export interface TextFieldProps
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "type"> {
+  /**
+   * If true, the input will display different styles on his border,
+   * label and hintText.
+   */
   hasError?: boolean;
+  /**
+   * The text that will be displayed on the bottom of the input.
+   */
   hintText?: string;
+  /**
+   * The label that will be displayed on the top of the input.
+   */
+  label: string;
+  /**
+   * Text type of type of the input.
+   *
+   * @default 'text'
+   */
+  type?: "text" | "password" | "email" | "number";
 }
