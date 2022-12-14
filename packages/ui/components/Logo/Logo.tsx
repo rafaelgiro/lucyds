@@ -47,7 +47,7 @@ export const Logo = (props: LogoProps) => {
   );
 };
 
-interface LogoProps extends React.SVGAttributes<HTMLElement> {
+interface LogoProps extends React.SVGAttributes<SVGElement> {
   /**
    * Logo's width
    * @default undefined

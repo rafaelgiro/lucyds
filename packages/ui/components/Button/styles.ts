@@ -8,6 +8,7 @@ export const LucyButton = styled.button<LucyButtonProps>`
   ${({ size }) => sizes[size]}
   position: relative;
   transition: margin-top 0.2s ease-out;
+  margin-bottom: 0.5rem;
 
   &::after {
     content: "";

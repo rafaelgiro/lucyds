@@ -44,7 +44,8 @@ export const defaultColors: ThemeColors = {
  * ```
  */
 export const ThemeProvider = (props: ThemeProviderProps) => {
-  const { children, color } = props;
+  const { children, color: newColor } = props;
+  const color = newColor || defaultColors;
 
   return (
     <>
@@ -82,9 +83,7 @@ export const ThemeProvider = (props: ThemeProviderProps) => {
           }
         `}
       />
-      <EmotionProvider theme={{ ...theme, color: color || defaultColors }}>
-        {children}
-      </EmotionProvider>
+      <EmotionProvider theme={{ ...theme, color }}>{children}</EmotionProvider>
     </>
   );
 };
@@ -97,5 +96,5 @@ interface ThemeProviderProps {
   /**
    * App's theme colors
    */
-  color: ThemeColors;
+  color?: ThemeColors;
 }

@@ -3,6 +3,7 @@ import { TextFieldProps } from "./TextField";
 
 export const LucyTextField = styled.div<LucyTextFieldProps>`
   position: relative;
+  margin-bottom: 1rem;
 
   label {
     display: flex;
