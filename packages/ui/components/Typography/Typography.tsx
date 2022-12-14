@@ -16,23 +16,11 @@ export const Typography = forwardRef<HTMLDivElement, TypographyProps>(
       variant = "paragraph",
       htmlTag = "span",
       className,
-      isDisabled = false,
       ...other
     } = props;
 
     return (
-      <LucyTypography
-        ref={ref}
-        as={htmlTag}
-        variant={variant}
-        className={clsx(
-          "typography",
-          variant,
-          className,
-          isDisabled && "disabled"
-        )}
-        {...other}
-      />
+      <LucyTypography ref={ref} as={htmlTag} variant={variant} {...other} />
     );
   }
 );
@@ -53,7 +41,7 @@ export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
    */
   children: React.ReactNode;
   /**
-   * If true, the text will have a different color.
+   * If true, the text will have its color changed to indicate an error.
    */
-  isDisabled?: boolean;
+  hasError?: boolean;
 }
