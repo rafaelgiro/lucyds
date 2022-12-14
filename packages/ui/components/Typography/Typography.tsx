@@ -35,7 +35,7 @@ export interface TypographyProps extends React.HTMLAttributes<HTMLElement> {
   /**
    * Font type style to render
    */
-  variant?: "paragraph" | "button" | "label";
+  variant?: "paragraph" | "button" | "label" | "hint";
   /**
    * Text content of the component
    */

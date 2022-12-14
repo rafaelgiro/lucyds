@@ -1,12 +1,29 @@
-import { TextFieldContainer } from "./styles";
+import { Typography } from "../Typography";
+import { LucyTextField } from "./styles";
 
 export const TextField = (props: TextFieldProps) => {
-  const { hasError, hintText, ...other } = props;
+  const { hasError, hintText, label, id, type = "text", ...other } = props;
 
   return (
-    <TextFieldContainer>
-      <input {...other} />
-    </TextFieldContainer>
+    <LucyTextField>
+      <label htmlFor={id}>
+        <Typography variant="label" hasError={hasError}>
+          {label}
+        </Typography>
+        <input
+          type={type}
+          id={id}
+          aria-invalid={hasError}
+          aria-describedby={`${id}-hint`}
+          {...other}
+        />
+      </label>
+      {hintText && (
+        <Typography variant="hint" id={`${id}-hint`} hasError={hasError}>
+          {hintText}
+        </Typography>
+      )}
+    </LucyTextField>
   );
 };
 

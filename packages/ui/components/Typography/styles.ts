@@ -27,6 +27,10 @@ const variants: Record<
     font-size: 1rem;
     font-weight: 400;
   `,
+  hint: css`
+    font-size: 0.75rem;
+    font-weight: 400;
+  `,
 };
 
 interface LucyTypographyProps extends Omit<TypographyProps, "priority"> {
