@@ -1,5 +1,6 @@
 import { forwardRef } from "react";
-import { LucyBytton } from "./styles";
+import { Typography } from "../Typography";
+import { LucyButton } from "./styles";
 
 /**
  * Element used to trigger an action or event,
@@ -17,9 +18,9 @@ export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     const { priority = "primary", size = "md", children, ...other } = props;
 
     return (
-      <LucyBytton priority={priority} size={size} {...other} ref={ref}>
-        {children}
-      </LucyBytton>
+      <LucyButton priority={priority} size={size} {...other} ref={ref}>
+        <Typography variant="button">{children}</Typography>
+      </LucyButton>
     );
   }
 );
