@@ -1,1 +1,1 @@
-export * from "./PsychedelicBox";
+export { PsychedelicBox } from "./PsychedelicBox";
