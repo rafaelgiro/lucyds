@@ -25,13 +25,17 @@ export default function Docs() {
             height: 100%;
           }
 
+          main {
+            overflow: hidden;
+          }
+
           .container {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             padding-top: 1rem;
-            overflow: hidden;
             position: relative;
+            z-index: 10;
           }
 
           .snek {
@@ -45,6 +49,7 @@ export default function Docs() {
             max-width: 35vw;
             bottom: 0;
             left: 0;
+            z-index: 20;
 
             @media (min-width: 768px) {
               max-width: 20vw;
@@ -53,12 +58,14 @@ export default function Docs() {
         `}
       />
       <ThemeProvider>
-        <div className="container">
-          <Screen />
-          <Snek />
-        </div>
-        <Display />
-        <Eyes />
+        <main>
+          <div className="container">
+            <Screen />
+            <Snek />
+          </div>
+          <Display />
+          <Eyes />
+        </main>
       </ThemeProvider>
     </div>
   );

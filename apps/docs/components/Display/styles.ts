@@ -6,10 +6,6 @@ export const DisplayContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  @media (min-width: 768px) {
-    margin-top: -5rem;
-  }
-
   h2 {
     margin-top: 1rem;
   }
