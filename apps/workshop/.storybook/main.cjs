@@ -12,5 +12,6 @@ module.exports = {
   },
   features: {
     storyStoreV7: true,
+    emotionAlias: false,
   },
 };
